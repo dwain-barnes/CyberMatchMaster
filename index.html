@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Matching Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="layout">
+    <div class="header">
+      <h1>Computer Misuse Act Matching Game</h1>
+      <div id="header-container">
+        <div id="timer">Time left: 60s</div>
+        <div id="score">Score: <span id="score-value">0</span></div>
+      </div>
+      <p>Drag the term over to the matching definition</p>
+    </div>
+    <div class="leftSide">
+      <img src="img/super-hero.png" alt="Super Cyber Hero" class="super-hero-img">
+    </div>
+    <div class="body">
+      <ul class="draggable-list">
+        <li id="e1" draggable="true">Cybercrime</li>
+        <li id="e2" draggable="true">Spamming</li>
+        <li id="e3" draggable="true">Identity Theft</li>
+        <li id="e4" draggable="true">Hacking</li>
+        <li id="e5" draggable="true">Phishing</li>
+        <li id="e6" draggable="true">Botnet</li>
+        <li id="e7" draggable="true">Denial of Service (DOS) Attack</li>
+        <li id="e8" draggable="true">Firewall</li>
+        <li id="e9" draggable="true">Virus</li>
+      </ul>
+      <ul class="draggable-list">
+        <li id="s6" draggable="true">A network of private computers infected with malicious software and controlled as a group without the owners' knowledge, e.g. to send spam.</li>
+        <li id="s2" draggable="true">Sending the same message indiscriminately to a large number of Internet users</li>
+        <li id="s9" draggable="true">A malicious program or code that attaches itself to another program file and can replicate itself and thereby infect other systems</li>
+        <li id="s4" draggable="true">Gaining unauthorised access to data in a system or computer</li>
+        <li id="s7" draggable="true">An attempt to make a machine or network resource unavailable to its intended users, such as to temporarily or indefinitely interrupt or suspend services of a host connected to the Internet</li>
+        <li id="s1" draggable="true">Any illegal activity that uses a computer as its primary means of commission</li>
+        <li id="s8" draggable="true">A security barrier designed to keep unwanted intruders "outside" a computer system or network while allowing safe communication between systems and users on the "inside".</li>
+        <li id="s3" draggable="true">The fraudulent practice of using another person's name and personal information in order to obtain credit, loans, etc.</li>
+        <li id="s5" draggable="true">The fraudulent practice of sending emails purporting to be from reputable companies in order to induce individuals to reveal personal information online</li>
+      </ul>
+    </div>
+    <div class="rightSide">
+      <img src="img/super-hacker.png" alt="Super Hacker" class="super-hacker-img">
+    </div>
+    <div class="footer">
+      <div id="endMessage">
+        <h3>Well done!</h3>
+        <video id="completedVideo" width="640" height="360" autoplay controls>
+          <source src="video/completed.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <table>
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+          <tr>
+            <td>Cybercrime</td>
+            <td>Any illegal activity that uses a computer as its primary means of commission</td>
+          </tr>
+          <tr>
+            <td>Spamming</td>
+            <td>Sending the same message indiscriminately to a large number of Internet users</td>
+          </tr>
+          <tr>
+            <td>Identity Theft</td>
+            <td>The fraudulent practice of using another person's name and personal information in order to obtain credit, loans, etc.</td>
+          </tr>
+          <tr>
+            <td>Hacking</td>
+            <td>Gaining unauthorised access to data in a system or computer</td>
+          </tr>
+          <tr>
+            <td>Phishing</td>
+            <td>The fraudulent practice of sending emails purporting to be from reputable companies in order to induce individuals to reveal personal information online</td>
+          </tr>
+          <tr>
+            <td>Botnet</td>
+            <td>A network of private computers infected with malicious software and controlled as a group without the owners' knowledge, e.g. to send spam.</td>
+          </tr>
+          <tr>
+            <td>Denial of Service (DOS) Attack</td>
+            <td>An attempt to make a machine or network resource unavailable to its intended users, such as to temporarily or indefinitely interrupt or suspend services of a host connected to the Internet</td>
+          </tr>
+          <tr>
+            <td>Firewall</td>
+            <td>A security barrier designed to keep unwanted intruders "outside" a computer system or network while allowing safe communication between systems and users on the "inside".</td>
+          </tr>
+          <tr>
+            <td>Virus</td>
+            <td>A malicious program or code that attaches itself to another program file and can replicate itself and thereby infect other systems</td>
+          </tr>
+        </table>
+        <button onclick="window.playAgain()">Play Again</button>
+      </div>
+      <div id="gameOverMessage" style="display:none;">
+        <h3>Game Over!</h3>
+        <button onclick="window.playAgain()">Start New Game</button>
+      </div>
+    </div>
+  </section>
+  <script src="js/script.js"></script>
+</body>
+</html>
