@@ -114,6 +114,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function dragDrop() {
         dropTargetId = this.id;
 
+        // Check if the drag started and ended on the same element
+        if (selectedId === dropTargetId) {
+            this.classList.remove('over');
+            return; // Exit the function without any action
+        }
+
         if (checkForMatch(selectedId, dropTargetId)) {
             document.getElementById(selectedId).classList.add('matched');
             document.getElementById(dropTargetId).classList.add('matched');
@@ -145,8 +151,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function gameCompleted() {
         endMessage.style.display = 'block';
-        const completedVideo = document.getElementById('completedVideo');
-        completedVideo.play();
         
         leftSide.style.display = 'none';
         rightSide.style.display = 'none';
